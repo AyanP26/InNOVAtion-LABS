@@ -1,0 +1,15 @@
+body {
+    background-image: url("background.jpg");
+}
+
+.goalhead {
+    text-align: center;
+    font-size: 30px;
+}
+
+.goaltext {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
