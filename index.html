@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InNOVAtion Labs</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <script src="index.js"></script>
+</head>
+<body>
+    <div w3-include-html="Header/header.html"></div>
+    <div id="mySidenav" class="sidenav">
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+            <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+            <li><a href="/Equipment/equipment.html">Equipment</a></li>
+            <li><a href="/Membership/membership.html">Membership</a></li>
+            <li><a href="/Reservation/reservation.html">Reservation</a></li>
+            <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
+            <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function myFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("mySearch");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myMenu");
+          li = ul.getElementsByTagName("li");
+        
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+        </script>
+
+    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <div class="goal">
+    <h2 class="goalhead">Our Mission</h2>
+    <p class="goaltext">We at InNOVAtion Labs strive to teach kids to innovate and increase their creativeness.
+            With our services, you can ensure that your kids will become skilled engineers, artists, innovators, and more.
+            Kids will learn the importance of collaboration and communication in any project.
+            At InNOVAtion Labs kids will have learn and have fun.
+            <a href="Membership/membership.html">Join us</a> and have fun building!
+    </p>
+    <div class="ratings">
+    <h2>Reviews</h2>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    </div>
+    <img class="homepageimg" src="rahul-jain-JOYtT8_Y7c8-unsplash.jpg" alt="Homepage Image"> 
+    </div>
+    <div w3-include-html="Footer/footer.html"></div> 
+    <script>
+        includeHTML();
+    </script>
+    
+</body>
+</html>
