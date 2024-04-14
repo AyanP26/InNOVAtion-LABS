@@ -1,0 +1,96 @@
+body {
+    background-image: url("background.jpg");
+}
+
+.goalhead {
+    text-align: center;
+    font-size: 30px;
+}
+
+.goaltext {
+    margin: 0 auto;
+    text-align: justify;
+    width: 30em;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.homepageimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    width: 50%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  #mySearch {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+  }
+  
+  #myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #myMenu li a {
+    padding: 12px;
+    text-decoration: none;
+    display: block
+  }
+
+  .ratings {
+    margin-left: 85%;
+  }
+
+  .checked {
+    color: yellow;
+  }
+  
