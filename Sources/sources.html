@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sources</title>
+    <link rel="stylesheet" href="/Sources/sources.css">
+    <script src="/Sources/sources.js"></script>
+</head>
+<body>
+    <a href="/index.html">
+        <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo">
+    </a>
+    <br>
+    <div id="mySidenav" class="sidenav">
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+            <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+            <li><a href="/Equipment/equipment.html">Equipment</a></li>
+            <li><a href="/Membership/membership.html">Membership</a></li>
+            <li><a href="/Reservation/reservation.html">Reservation</a></li>
+            <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
+            <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function myFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("mySearch");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myMenu");
+          li = ul.getElementsByTagName("li");
+        
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+        </script>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <ul class="sources">
+        <li><p>Blue Paint Background - By Annie Spratt on Unsplash</p></li>
+        <li><p>InNOVAtion Labs Logo - Made in Canva by Ananth Namilae</p></li>
+        <li><p>Avatar Icon - <a href="https://commons.wikimedia.org/wiki/File:User_Avatar.png">my_thesis_account</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</p></li>
+        <li><p>Home Page Painting Image - By Rahul Jain on Unsplash</p>
+        <li><p>Star Rating Icons - By <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css</a></p></li>
+        <li><p>Cart Icon - By <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css</a></p></li>
+    </ul>
+    <div w3-include-html="/Footer/footer.html"></div> 
+    <script>
+        includeHTML();
+    </script> 
+</body>
+</html>
