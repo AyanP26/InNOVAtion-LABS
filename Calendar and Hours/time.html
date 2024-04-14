@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar of Events and Hours</title>
+    <link rel="stylesheet" href="/Calendar and Hours/time.css">
+    <script src="/Calendar and Hours/time.js"></script>
+</head>
+<body>
+    <a href="/index.html">
+        <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo">
+    </a>
+    <br>    
+    <div id="mySidenav" class="sidenav">
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+            <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+            <li><a href="/Equipment/equipment.html">Equipment</a></li>
+            <li><a href="/Membership/membership.html">Membership</a></li>
+            <li><a href="/Reservation/reservation.html">Reservation</a></li>
+            <li><a href="/Calendar and Daily Schedule/time.html">Calendar of Events and Daily Schedule</a></li>
+            <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function myFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("mySearch");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myMenu");
+          li = ul.getElementsByTagName("li");
+        
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+        </script>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <br>
+    <!--Hours-->
+    <div class="hours">
+    <ul>
+        <strong><h4>Hours For Novice Pioneers and Basic Developers:</h4></strong>
+        <li>Monday-Friday: 7:00 A.M. - 8:00 P.M.</li>
+        <li>Saturday: 8:00 A.M. - 7:30 P.M.</li>
+        <li>Sunday: Closed</li>
+    </ul>
+    </div>
+
+    <!--Calendar-->
+    <button id="myBtn" class="modalBtn">
+    <img class="calendar" src="/Calendar and Hours/Calendar.png" alt="Calendar">
+    </button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="wrapper">
+                <div class="container-calendar">
+                    <div id="left">
+                        <h1>Event Calendar</h1>
+                        <h4 class="classesandevents"><a class="classesandevents" href="/Classes and Events/classes.html" target="_blank">Classes and Events</a></h4>
+                        <div id="event-section">
+                            <h3>Event Signup</h3>
+                            <input type="date" id="eventDate">
+                            <input type="text" id="eventTitle" placeholder="Event Title">
+                            <input type="text" id="people" placeholder="Number of People">
+                            <button id="addEvent" onclick="addEvent()">
+                                Sign Up
+                            </button>
+                        </div>
+                        <div id="reminder-section">
+                            <h3>Signed Up Events</h3>
+                            <ul id="reminderList">
+                                <li data-event-id="1">
+                                    <strong>Event Title</strong>
+                                    - Event Description on Event Date
+                                    <button class="delete-event"
+                                        onclick="deleteEvent(1)">
+                                        Delete
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <h3 id="monthAndYear"></h3>
+                        <div class="button-container-calendar">
+                            <button id="previous"
+                                    onclick="previous()">
+                                  ‹
+                              </button>
+                            <button id="next"
+                                    onclick="next()">
+                                  ›
+                              </button>
+                        </div>
+                        <table class="table-calendar"
+                               id="calendar"
+                               data-lang="en">
+                            <thead id="thead-month"></thead>
+                            <tbody id="calendar-body"></tbody>
+                        </table>
+                        <div class="footer-container-calendar">
+                            <label for="month">Jump To: </label>
+                            <select id="month" onchange="jump()">
+                                <option value=0>Jan</option>
+                                <option value=1>Feb</option>
+                                <option value=2>Mar</option>
+                                <option value=3>Apr</option>
+                                <option value=4>May</option>
+                                <option value=5>Jun</option>
+                                <option value=6>Jul</option>
+                                <option value=7>Aug</option>
+                                <option value=8>Sep</option>
+                                <option value=9>Oct</option>
+                                <option value=10>Nov</option>
+                                <option value=11>Dec</option>
+                            </select>
+                            <select id="year" onchange="jump()"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                let events = [];
+ 
+ let eventDateInput =
+     document.getElementById("eventDate");
+ let eventTitleInput =
+     document.getElementById("eventTitle");
+ let peopleInput =
+     document.getElementById("people");
+ let reminderList =
+     document.getElementById("reminderList");
+  
+ let eventIdCounter = 1;
+ 
+ function addEvent() {
+     let date = eventDateInput.value;
+     let title = eventTitleInput.value;
+     let peoplenumber = peopleInput.value;
+  
+     if (date && title) {
+         let eventId = eventIdCounter++;
+  
+         events.push(
+             {
+                 id: eventId, date: date,
+                 title: title,
+                 peoplenumber: peoplenumber
+             }
+         );
+         showCalendar(currentMonth, currentYear);
+         eventDateInput.value = "";
+         eventTitleInput.value = "";
+         peopleInput.value = "";
+         displayReminders();
+     }
+ }
+  
+ function deleteEvent(eventId) {
+     let eventIndex =
+         events.findIndex((event) =>
+             event.id === eventId);
+  
+     if (eventIndex !== -1) {
+         events.splice(eventIndex, 1);
+         showCalendar(currentMonth, currentYear);
+         displayReminders();
+     }
+ }
+  
+ function displayReminders() {
+     reminderList.innerHTML = "";
+     for (let i = 0; i < events.length; i++) {
+         let event = events[i];
+         let eventDate = new Date(event.date);
+         if (eventDate.getMonth() ===
+             currentMonth &&
+             eventDate.getFullYear() ===
+             currentYear) {
+             let listItem = document.createElement("li");
+             listItem.innerHTML =
+                 `<strong>${event.title}</strong> - 
+             ${event.peoplenumber} on 
+             ${eventDate.toLocaleDateString()}`;
+  
+             let deleteButton =
+                 document.createElement("button");
+             deleteButton.className = "delete-event";
+             deleteButton.textContent = "Delete";
+             deleteButton.onclick = function () {
+                 deleteEvent(event.id);
+             };
+  
+             listItem.appendChild(deleteButton);
+             reminderList.appendChild(listItem);
+         }
+     }
+ }
+  
+ function generate_year_range(start, end) {
+     let years = "";
+     for (let year = start; year <= end; year++) {
+         years += "<option value='" +
+             year + "'>" + year + "</option>";
+     }
+     return years;
+ }
+  
+ today = new Date();
+ currentMonth = today.getMonth();
+ currentYear = today.getFullYear();
+ selectYear = document.getElementById("year");
+ selectMonth = document.getElementById("month");
+  
+ createYear = generate_year_range(1970, 2050);
+  
+ document.getElementById("year").innerHTML = createYear;
+  
+ let calendar = document.getElementById("calendar");
+  
+ let months = [
+     "January",
+     "February",
+     "March",
+     "April",
+     "May",
+     "June",
+     "July",
+     "August",
+     "September",
+     "October",
+     "November",
+     "December"
+ ];
+ let days = [
+     "Sun", "Mon", "Tue", "Wed",
+     "Thu", "Fri", "Sat"];
+  
+ $dataHead = "<tr>";
+ for (dhead in days) {
+     $dataHead += "<th data-days='" +
+         days[dhead] + "'>" +
+         days[dhead] + "</th>";
+ }
+ $dataHead += "</tr>";
+  
+ document.getElementById("thead-month").innerHTML = $dataHead;
+  
+ monthAndYear =
+     document.getElementById("monthAndYear");
+ showCalendar(currentMonth, currentYear);
+  
+ function next() {
+     currentYear = currentMonth === 11 ?
+         currentYear + 1 : currentYear;
+     currentMonth = (currentMonth + 1) % 12;
+     showCalendar(currentMonth, currentYear);
+ }
+  
+ function previous() {
+     currentYear = currentMonth === 0 ?
+         currentYear - 1 : currentYear;
+     currentMonth = currentMonth === 0 ?
+         11 : currentMonth - 1;
+     showCalendar(currentMonth, currentYear);
+ }
+  
+ function jump() {
+     currentYear = parseInt(selectYear.value);
+     currentMonth = parseInt(selectMonth.value);
+     showCalendar(currentMonth, currentYear);
+ }
+  
+ function showCalendar(month, year) {
+     let firstDay = new Date(year, month, 1).getDay();
+     tbl = document.getElementById("calendar-body");
+     tbl.innerHTML = "";
+     monthAndYear.innerHTML = months[month] + " " + year;
+     selectYear.value = year;
+     selectMonth.value = month;
+  
+     let date = 1;
+     for (let i = 0; i < 6; i++) {
+         let row = document.createElement("tr");
+         for (let j = 0; j < 7; j++) {
+             if (i === 0 && j < firstDay) {
+                 cell = document.createElement("td");
+                 cellText = document.createTextNode("");
+                 cell.appendChild(cellText);
+                 row.appendChild(cell);
+             } else if (date > daysInMonth(month, year)) {
+                 break;
+             } else {
+                 cell = document.createElement("td");
+                 cell.setAttribute("data-date", date);
+                 cell.setAttribute("data-month", month + 1);
+                 cell.setAttribute("data-year", year);
+                 cell.setAttribute("data-month_name", months[month]);
+                 cell.className = "date-picker";
+                 cell.innerHTML = "<span>" + date + "</span";
+  
+                 if (
+                     date === today.getDate() &&
+                     year === today.getFullYear() &&
+                     month === today.getMonth()
+                 ) {
+                     cell.className = "date-picker selected";
+                 }
+  
+                 if (hasEventOnDate(date, month, year)) {
+                     cell.classList.add("event-marker");
+                     cell.appendChild(
+                         createEventTooltip(date, month, year)
+                  );
+                 }
+  
+                 row.appendChild(cell);
+                 date++;
+             }
+         }
+         tbl.appendChild(row);
+     }
+  
+     displayReminders();
+ }
+  
+ function createEventTooltip(date, month, year) {
+     let tooltip = document.createElement("div");
+     tooltip.className = "event-tooltip";
+     let eventsOnDate = getEventsOnDate(date, month, year);
+     for (let i = 0; i < eventsOnDate.length; i++) {
+         let event = eventsOnDate[i];
+         let eventDate = new Date(event.date);
+         let eventText = `<strong>${event.title}</strong> - 
+             ${event.description} on 
+             ${eventDate.toLocaleDateString()}`;
+         let eventElement = document.createElement("p");
+         eventElement.innerHTML = eventText;
+         tooltip.appendChild(eventElement);
+     }
+     return tooltip;
+ }
+  
+ function getEventsOnDate(date, month, year) {
+     return events.filter(function (event) {
+         let eventDate = new Date(event.date);
+         return (
+             eventDate.getDate() === date &&
+             eventDate.getMonth() === month &&
+             eventDate.getFullYear() === year
+         );
+     });
+ }
+  
+ function hasEventOnDate(date, month, year) {
+     return getEventsOnDate(date, month, year).length > 0;
+ }
+  
+ function daysInMonth(iMonth, iYear) {
+     return 32 - new Date(iYear, iMonth, 32).getDate();
+ }
+  
+ showCalendar(currentMonth, currentYear);
+            </script>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("myModal");
+        
+        var btn = document.getElementById("myBtn");
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+        
+
+    <div w3-include-html="/Footer/footer.html"></div> 
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>
