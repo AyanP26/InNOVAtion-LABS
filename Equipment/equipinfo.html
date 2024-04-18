@@ -3,22 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipment Information</title>
-    
+    <title>Equipment Information</title>  
     <link rel="stylesheet" href="equipinfo.css">
-    <script src="/InNOVAtion-LABS-main/Equipment/equipinfo.js"></script>
+    <script src="/Equipment/equipinfo.js"></script>
+</head>
+<body>
+<a href="/index.html">
+        <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo">
+    </a>
+    <br>    
+    <div id="mySidenav" class="sidenav">
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+            <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+            <li><a href="/Equipment/equipment.html">Equipment</a></li>
+            <li><a href="/Membership/membership.html">Membership</a></li>
+            <li><a href="/Reservation/reservation.html">Reservation</a></li>
+            <li><a href="/Calendar and Daily Schedule/time.html">Calendar of Events and Daily Schedule</a></li>
+            <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+        </ul>
+    </div>
 
-    
-    <div w3-include-html="/InNOVAtion-LABS-main/Header/header.html"></div>
-    <div w3-include-html="/InNOVAtion-LABS-main/Navigation/leftnav.html"></div>
+    <script>
+        function myFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("mySearch");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myMenu");
+          li = ul.getElementsByTagName("li");
+        
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+        </script>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
     <h1 class= "equipinfo"> Equipment Reservation/information </h1>
-    <p1 class=" defofparagraph1"> In this page, you could reserve a time, place, and equipment. Simply click the green reservation button, state the time you want to apply (for more long term investments, scroll down and read the clause we have.), and state the time and date you want to apply, and fill out all necessary information. </p1>
-
-</head>
-<body>
-
-</head>
-<body>
+    <p class=" defofparagraph1"> In this page, you could reserve a time, place, and equipment. Simply click the green reservation button, state the time you want to apply (for more long term investments, scroll down and read the clause we have.), and state the time and date you want to apply, and fill out all necessary information. </p>
     
 </body>
 </html>
