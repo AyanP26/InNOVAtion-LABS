@@ -54,6 +54,53 @@
           document.getElementById("mySidenav").style.width = "0";
         }
     </script>
+    <!--Membership Section-->
+    <div class="membership">
+      <h2>Membership</h2>
+      <p class="membertext">
+        Signing up for membership gives you many abilities such as being able to sign up for events, reserve equipment, or reserve rooms.
+      </p>
+      <h2>Ranks</h2>
+      <p class="membertext">
+        Depending on how much you pay, you are assigned a certain rank. Your rank decides how long you can use the facilities for and on what days.
+      </p>
+      <ol class="ranks">
+        <li>Novice Pioneer($10/month): Monday-Friday with the timings as stated on the <a href="/Calendar and Hours/time.html" target="_blank">calendar of events and hours</a> page.</li>
+        <li>Intermediate Developer($15/month): Monday-Friday and Saturday with the timings as stated on the <a href="/Calendar and Hours/time.html" target="_blank">calendar of events and hours</a> page.</li>
+        <li>Master Innovator($20/month): 24/7 Monday-Friday and Saturday.</li>
+      </ol>
+      <button class="open-button" onclick="openForm()">Join Today!</button>
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Join Us</h1>
+
+          <label for="name"><b>Name</b></label>
+          <br>
+          <input type="text" placeholder="Enter Name" name="name" required>
+          <br>
+          <label for="email"><b>Email</b></label>
+          <br>
+          <input type="text" placeholder="Enter Email" name="email" required>
+          <br>
+          <label for="psw"><b>Credit Card Number</b></label>
+          <br>
+          <input type="password" placeholder="Enter Credit Card Number" name="psw" required>
+      
+          <button type="submit" class="btn">Join</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      <script>
+        function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+      </script>
+    </div>
+    <!--Footer-->
     <div w3-include-html="/Footer/footer.html"></div> 
     <script>
         includeHTML();
