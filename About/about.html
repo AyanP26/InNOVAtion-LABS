@@ -12,48 +12,36 @@
         <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo">
     </a>
     <br>    
-    <div id="mySidenav" class="sidenav">
-        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-        <ul id="myMenu">
-            <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-            <li><a href="/Equipment/equipment.html">Equipment</a></li>
-            <li><a href="/Membership/membership.html">Membership</a></li>
-            <li><a href="/Reservation/reservation.html">Reservation</a></li>
-            <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
-            <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
-        </ul>
+    <div class="sidenav">
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+      <ul id="myMenu">
+          <li><a href="/index.html">Homepage</a></li>
+          <li><a href="/Equipment/equipment.html">Equipment</a></li>
+          <li><a href="/Membership/membership.html">Membership</a></li>
+          <li><a href="/Reservation/reservation.html">Reservation</a></li>
+          <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
+          <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+      </ul>
     </div>
 
-    <script>
-        function myFunction() {
-          var input, filter, ul, li, a, i;
-          input = document.getElementById("mySearch");
-          filter = input.value.toUpperCase();
-          ul = document.getElementById("myMenu");
-          li = ul.getElementsByTagName("li");
-        
-          for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("a")[0];
-            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              li[i].style.display = "";
-            } else {
-              li[i].style.display = "none";
-            }
+  <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
           }
         }
-        </script>
-
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-    <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
+      }
+      </script>
     <div w3-include-html="/Footer/footer.html"></div> 
     <script>
         includeHTML();
