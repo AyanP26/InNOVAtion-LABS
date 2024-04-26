@@ -76,3 +76,22 @@ body {
     display: block
   }
   
+  .aboutdiv {
+    padding: 0;
+  }
+  
+  .about {
+    text-align: center;
+  }
+
+  .aboutimg {
+    display: block;
+    margin-left: 20%;
+    margin-right: auto;
+  }
+
+  .abouttext {
+    font-size: 20px;
+    float: right;
+    text-align: justify;
+  }
