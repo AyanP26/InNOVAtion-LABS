@@ -105,5 +105,8 @@ body {
 
   .video3 {
     margin-right: 4%;
-    position: absolute;  
+  }
+
+  .videotext {
+    margin-bottom: 0;
   }
