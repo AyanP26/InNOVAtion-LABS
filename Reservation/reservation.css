@@ -97,7 +97,7 @@ body {
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-130%, 950%);
+    transform: translate(-130%, 1200%);
     border-radius: 25px;
     background-color: red;
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3), 0 5px 21px 0 rgba(0,0,0,0.18);
@@ -144,7 +144,7 @@ body {
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(40%, 700%);
+    transform: translate(40%, 900%);
     border-radius: 25px;
     background-color: yellow;
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3), 0 5px 21px 0 rgba(0,0,0,0.18);
@@ -191,7 +191,7 @@ body {
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(40%, 1100%);
+    transform: translate(40%, 1400%);
     border-radius: 25px;
     background-color: orange;
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3), 0 5px 21px 0 rgba(0,0,0,0.18);
@@ -238,7 +238,7 @@ body {
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(70%, 100%);
+    transform: translate(70%, 300%);
     border-radius: 25px;
     background-color: cyan;
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3), 0 5px 21px 0 rgba(0,0,0,0.18);
@@ -285,7 +285,7 @@ body {
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-150%, 500%);
+    transform: translate(-150%, 800%);
     border-radius: 25px;
     background-color: green;
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3), 0 5px 21px 0 rgba(0,0,0,0.18);
@@ -332,7 +332,7 @@ body {
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-150%, 30%);
+    transform: translate(-150%, 300%);
     border-radius: 25px;
     background-color: #9E00FF;
     box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3), 0 5px 21px 0 rgba(0,0,0,0.18);
