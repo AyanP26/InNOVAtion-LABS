@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Information</title>  
+    <link rel="stylesheet" href="/Equipment/equipinfo.css">
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <script src="/Equipment/equipinfo.js"></script>
+</head>
+<body>
+<a href="/index.html">
+        <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo">
+    </a>
+    
+    <h1 class= "equipinfo"> Equipment Reservation/information </h1>
+    <p class=" defofparagraph1"> 
+      A laser cutter in a makerspace is a dream tool for anyone with ideas for precise and creative projects. It essentially uses a powerful, focused laser beam to cut or engrave a design onto flat materials. Here's what you can expect from a laser cutting setup in a makerspace:
+
+      Capabilities:
+      
+      Cutting: Laser cutters can precisely cut through a variety of materials, including wood, acrylic, cardboard, fabric (depending on type), and some plastics. The exact thickness of materials that can be cut will depend on the specific laser cutter's wattage.
+      Engraving: The laser can also be used for engraving designs or text onto the surface of the material, creating a permanent mark.
+      Process and Projects:
+      
+      Design Before You Cut: Makerspaces typically require you to design your project using software that creates a specific file format (often DXF or SVG) compatible with the laser cutter.
+      Safety First: Laser cutters are powerful tools, so safety glasses are mandatory to protect your eyes from the laser beam. Some makerspaces may require additional safety training before using the equipment.
+      Unleash Your Creativity: With laser cutting, you can bring all sorts of ideas to life. People use them to make personalized gifts, design custom jewelry, create model parts, prototype inventions, and much more.
+      Makerspace Benefits:
+      
+      Accessibility: Laser cutters can be expensive for individual ownership. Makerspaces provide access to this advanced tool at a membership cost.
+      Software and Training: Some makerspaces may offer introductory training on using laser cutting software or the machine itself. This can be a huge benefit for beginners.
+      Community and Support: More experienced makerspace members can offer advice on design, material selection, and troubleshooting any issues you encounter.
+      Finding a Laser Cutter Makerspace:
+      
+      Look at the websites of makerspaces in your area. They'll usually detail their equipment, including any laser cutters, and any membership requirements.
+      Search online forums or communities focused on laser cutting or makerspaces. Terms like "[laser cutting] + [makerspace]" can help you find relevant discussions about makerspaces with laser cutters.
+      
+      pen_spark
+      
+      
+      
+      tune
+      
+      share
+      
+      
+      more_vert
+        
+    </p>
+    <div class="sidenav">
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+      <ul id="myMenu">
+          <li><a href="/index.html">Homepage</a></li>
+          <li><a href="/Equipment/equipment.html">Equipment</a></li>
+          <li><a href="/Membership/membership.html">Membership</a></li>
+          <li><a href="/Reservation/reservation.html">Reservation</a></li>
+          <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
+          <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+      </ul>
+    </div>
+
+  <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+      </script>
+</body>
+</html>

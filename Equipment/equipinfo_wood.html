@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Information</title>  
+    <link rel="stylesheet" href="/Equipment/equipinfo.css">
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <script src="/Equipment/equipinfo.js"></script>
+</head>
+<body>
+<a href="/index.html">
+        <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo">
+    </a>
+    
+    <h1 class= "equipinfo"> Equipment Reservation/information </h1>
+    <p class=" defofparagraph1"> 
+      A makerspace woodshop is a wonderland for anyone who loves working with wood. It provides access to a range of equipment that most hobbyists wouldn't have space for in their home workshop, along with a supportive community for learning and collaboration. Here's what you'll typically find in a makerspace woodshop:
+
+      Equipment:
+      
+      Breaking Down Lumber: Band saws for ripping down lumber to size, and planers for achieving consistent thicknesses.
+      Jointing and Milling: Jointers ensure perfectly flat edges for gluing, while thickness planers create boards of uniform thickness.
+      Shaping and Finishing: Sanders of various grits smooth out surfaces, while drill presses make holes for joinery and hardware. Lathes allow for creating curved pieces and spindles.
+      Power Cutting Tools: Miter saws for precise cuts at angles, circular saws for general cutting needs, and jigsaws for intricate cuts.
+      Other Equipment: Depending on the makerspace, you might find specialty tools like woodturning lathes, CNC machines, or even vacuum clamps for holding glued pieces together.
+      Community and Learning:
+      
+      Safety First: Many makerspaces require safety certifications for using specific tools. This often involves training classes that teach proper technique and hazard awareness.
+      Shared Knowledge: Experienced woodworkers are usually around to offer guidance, suggest solutions, or simply inspire you with their projects.
+      Inspiration and Collaboration: Seeing the work of other makers can spark new ideas for your own projects. The collaborative environment fosters sharing of skills and techniques.
+      Projects:
+      
+      The possibilities in a makerspace woodshop are endless. You could be crafting anything from simple cutting boards and shelves to intricate furniture pieces, toys, or even artistic sculptures.
+      
+      Finding a Makerspace Woodshop:
+      
+      Check the website of makerspaces in your area. Most will have a dedicated section detailing their woodworking equipment and any membership requirements.
+      Search online communities like forums or subreddits for woodworking and makerspaces. Look for terms like "[woodworking] + [makerspace]" to find discussions about real-world experiences  
+    </p>
+    <div class="sidenav">
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+      <ul id="myMenu">
+          <li><a href="/index.html">Homepage</a></li>
+          <li><a href="/Equipment/equipment.html">Equipment</a></li>
+          <li><a href="/Membership/membership.html">Membership</a></li>
+          <li><a href="/Reservation/reservation.html">Reservation</a></li>
+          <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
+          <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+      </ul>
+    </div>
+
+  <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+      </script>
+</body>
+</html>
