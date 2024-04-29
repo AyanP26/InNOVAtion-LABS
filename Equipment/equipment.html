@@ -23,6 +23,7 @@
   div.gallery img {
     width: 100%;
     height: auto;
+    align-self: center;
   }
     .responsive {
     padding: 0 6px;
@@ -71,35 +72,33 @@
 </head>
 <body>
   <div w3-include-html="/Header/header2.html"></div>
-  <a href="/index.html">
-    <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo" style="float:left;width: 100px;height:100px;">
-  </a>
-<!--     <img src="/Equipment/pierre-bamin-jsg0cBOq-mE-unsplash.jpg" alt="Paintbrushes">
-    <img src="/Equipment/carolina-garcia-tavizon-Ay7Nkvc49ag-unsplash.jpg" alt="Origami">
-    <img src="/Equipment/austin-ramsey-IvzvlKQwjk8-unsplash.jpg" alt="Tools">
-    <img src="/Equipment/opt-lasers-bns7a0oCi40-unsplash.jpg" alt="CNC Machine">
- -->    <h1 class= "equipmentheader"> Equipment </h1>
+  <h1 class= "equipmentheader">Reserve Equipment</h1>
      
-    <p class="equipmentintro"><br><br>At InNOVAtion Labs offers equipment to its members in 4 simple steps. Pick the equipment, select a date and time, read and agree to usage terms and login to finalize the reservation. Bring your reservation to front desk to finalize the payment.</p>
-     <div class="mySidenav responsive ">
-     <!--  <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-        <ul class="myMenu">
-          <li><a href="/index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
-          <li><a href="/Equipment/equipment.html"><i class="fa fa-fw fa-wrench"></i> Equipment</a></li>
-          <li><a href="/Membership/membership.html"><i class="fa fa-fw fa-user"></i> Membership</a></li>
-          <li><a href="/Reservation/reservation.html"><i class="fa fa-fw fa-id-card-o"></i> Reservation</a></li>
-          <li><a href="/Calendar and Hours/time.html"><i class="fa fa-fw fa-calendar"></i> Events</a></li>
-          <li><a href="/Membership/membership.html"><i class="fa fa-fw fa-graduation-cap"></i> Classes</a></li>
-        </ul>
+    <!--Sidenav-->    
+    <div id="mySidenav" class="sidenav">
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
       <ul id="myMenu">
-        <li><a href="/index.html">Homepage</a></li>
+          <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+          <li><a href="/index.html">Homepage</a></li>
           <li><a href="/Equipment/equipment.html">Equipment</a></li>
           <li><a href="/Membership/membership.html">Membership</a></li>
           <li><a href="/Reservation/reservation.html">Reservation</a></li>
           <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
           <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
-      </ul> -->
-    </div>
+      </ul>
+      </div>
+
+      <span onclick="openNav()" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
 <!-- START NEW BODY-->
 <!-- START RESPONSIVE IMAGES-->  
 <style>
@@ -185,13 +184,19 @@
       <div class="desc">We offer Table saw, saw top, lathe machines under one roof. Read more and reserve <a href="/Equipment/equipinfo.html">here</a></div>
     </div>
     <div class="gallery">
-      <a  href="equipinfo.html">
+      <a  href="equipinfo_arts.html">
         <img src="art_craft.jpg" alt="EQUIPMENT - ARTS" width="600" height="400">
       </a>
-      <div class="desc">Give your imagination shape with hundreds of art tools <a href="/Equipment/equipinfo.html">here</a></div>
+      <div class="desc">Give your imagination shape with hundreds of art tools <a href="/Equipment/equipinfo_arts.html">here</a></div>
     </div>
 </div>
 </div>
-<p class="equipmentintro"><br><br>Not sure how to use the equipment? No problem. We offer many one of our many <a href="/Classes and Events/classes.html">classes</a> that meets your neeeds. We regularly add new equipment and update our services. Please checkout our upcoming changes <a href="/Equipment/equipinfo.html">here</a>.</p>
-<!-- END NEW BODY--></body>
+<p class="equipmentintro"><br><br>Not sure how to use the equipment? No problem. We offer many one of our many <a href="/Classes and Events/classes.html">classes</a> that meets your neeeds.<br>
+   Apply for our popular <a href="/Membership/membership.html">membership</a> program to join a supportive community for learning and collaboration. <br>We regularly add new equipment and update our services. Please checkout our upcoming changes <a href="/Equipment/equipinfo.html">here</a>.</p>
+<!-- END NEW BODY-->
+<div w3-include-html="/Footer/footer.html"></div> 
+<script>
+    includeHTML();
+</script>
+</body>
 </html>

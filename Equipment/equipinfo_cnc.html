@@ -9,32 +9,32 @@
     <script src="/Equipment/equipinfo.js"></script>
 </head>
 <body>
-    
-    <h1 class= "equipinfo"> Equipment Reservation/information </h1>
-    
-    <p class=" defofparagraph1"> 
-      In the realm of makerspaces, a CNC machine (Computer Numerical Control) is a powerhouse tool for creating intricate and precise designs. It translates digital instructions into physical objects by meticulously controlling a cutting tool or other implements. Here's a breakdown of what you'll find in a makerspace CNC setup:
+  <div w3-include-html="/Header/header2.html"></div>
+    <!--Sidenav-->    
+    <div id="mySidenav" class="sidenav">
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+      <ul id="myMenu">
+          <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+          <li><a href="/index.html">Homepage</a></li>
+          <li><a href="/Equipment/equipment.html">Equipment</a></li>
+          <li><a href="/Membership/membership.html">Membership</a></li>
+          <li><a href="/Reservation/reservation.html">Reservation</a></li>
+          <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
+          <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+      </ul>
+      </div>
 
-Capabilities:
+      <span onclick="openNav()" style="font-size:30px;cursor:pointer">&#9776;</span>
 
-Material Versatility: CNC machines in makerspaces can work with a wide range of materials, commonly including wood, plastic, acrylic, aluminum, and even some foams. The specific capabilities will depend on the machine's type and power.
-Milling and Routing: These are the most common functionalities. A rotating cutting tool removes material to create precise shapes and pockets in your chosen material.
-Beyond Cutting: Some advanced CNC machines might offer additional functionalities like drilling, engraving, or even 3D carving.
-Process and Projects:
-
-Design is Key: Projects come to life through Computer-Aided Design (CAD) software. You'll create a digital blueprint of your desired object, which is then converted into instructions the CNC machine understands.
-Safety First: CNC machines are powerful and require following safety protocols. Makerspaces may have specific training or certification requirements before users can operate them independently.
-Project Possibilities: The possibilities with a CNC machine are vast. You can create anything from custom signs and parts for furniture to complex prototypes and electronic enclosures.
-Benefits of a Makerspace CNC:
-
-Advanced Manufacturing at Your Fingertips: Owning a personal CNC machine can be quite expensive. Makerspaces offer access to this advanced technology for a membership fee.
-Software and Training: Some makerspaces might provide introductory training on design software or CNC operation, making it easier for beginners to get started.
-Expert Help and Collaboration: The makerspace community can be a valuable resource. More experienced members can offer guidance on design, material selection, and troubleshooting any challenges you face.
-Finding a Makerspace with CNC:
-
-Browse the websites of makerspaces in your area. They typically detail their equipment offerings, including CNC machines, and any membership requirements.
-Search online forums or communities focused on CNC machining or makerspaces. Terms like "[CNC machining] + [makerspace]" can help you find relevant discussions about makerspaces with CNC equipment
-    </p>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
     <div class="sidenav">
       <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
       <ul id="myMenu">
@@ -65,5 +65,50 @@ Search online forums or communities focused on CNC machining or makerspaces. Ter
         }
       }
       </script>
+<h1 class= "equipinfo"> Equipment Reservation - Computer Numerical Control(CNC) Machine</h1>
+<P class=" defofparagrapha">        
+  <div class="equipmentinfo"><a href="reserve.html"><button class="reserve" style="width: auto;">Reserve CNC Machines</button></a></div>
+  <p class=" defofparagraph1"> 
+    In the realm of makerspaces, a CNC machine (Computer Numerical Control) is a powerhouse tool for creating intricate and precise designs. It translates digital instructions into physical objects by meticulously controlling a cutting tool or other implements. Here's a breakdown of what you'll find in a makerspace CNC setup:
+
+Capabilities:
+
+Material Versatility: CNC machines in makerspaces can work with a wide range of materials, commonly including wood, plastic, acrylic, aluminum, and even some foams. The specific capabilities will depend on the machine's type and power.
+Milling and Routing: These are the most common functionalities. A rotating cutting tool removes material to create precise shapes and pockets in your chosen material.
+Beyond Cutting: Some advanced CNC machines might offer additional functionalities like drilling, engraving, or even 3D carving.
+Process and Projects:
+
+Design is Key: Projects come to life through Computer-Aided Design (CAD) software. You'll create a digital blueprint of your desired object, which is then converted into instructions the CNC machine understands.
+Safety First: CNC machines are powerful and require following safety protocols. Makerspaces may have specific training or certification requirements before users can operate them independently.
+Project Possibilities: The possibilities with a CNC machine are vast. You can create anything from custom signs and parts for furniture to complex prototypes and electronic enclosures.
+Benefits of a Makerspace CNC:
+
+Advanced Manufacturing at Your Fingertips: Owning a personal CNC machine can be quite expensive. Makerspaces offer access to this advanced technology for a membership fee.
+Software and Training: Some makerspaces might provide introductory training on design software or CNC operation, making it easier for beginners to get started.
+Expert Help and Collaboration: The makerspace community can be a valuable resource. More experienced members can offer guidance on design, material selection, and troubleshooting any challenges you face.
+Finding a Makerspace with CNC:
+
+Browse the websites of makerspaces in your area. They typically detail their equipment offerings, including CNC machines, and any membership requirements.
+Search online forums or communities focused on CNC machining or makerspaces. Terms like "[CNC machining] + [makerspace]" can help you find relevant discussions about makerspaces with CNC equipment
+  </p>
+
+<!--   InNOVALabs provides all equipment required for following activities: 
+<ul>
+  <li> Painting </li> 
+  <li> Oil Pastels* </li>
+  <li> Color pencils </li>
+  <li> Realistic Drawing </li>
+  <li> Sewing Machines and Hand Stitching* </li>
+  <li> Origami* </li>
+  </ul>
+</p>
+ -->
+<p>* participants under 8 years are not eligible paticipate in these activitie(s). Please read full list of
+<a href="terms.html"> terms and agreements</a> prior to registration<br>
+</p>
+<div w3-include-html="/Footer/footer.html"></div> 
+<script>
+    includeHTML();
+</script>
 </body>
 </html>

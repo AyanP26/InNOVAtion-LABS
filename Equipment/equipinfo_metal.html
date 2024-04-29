@@ -9,21 +9,32 @@
     <script src="/Equipment/equipinfo.js"></script>
 </head>
 <body>
-    <div w3-include-html="/Header/header2.html"></div>    
-    <h1 class= "equipinfo"> Equipment Reservation/information </h1>
-    <p class=" defofparagraph1">
-      <br><br>
-      InNOVAtion Labs metalwork area is a haven for anyone with a metalworking project. It provides access to specialized tools, typically too expensive for home use, and a collaborative environment for both beginners and experienced metalworkers.
+  <div w3-include-html="/Header/header2.html"></div>
+    <!--Sidenav-->    
+    <div id="mySidenav" class="sidenav">
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+      <ul id="myMenu">
+          <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+          <li><a href="/index.html">Homepage</a></li>
+          <li><a href="/Equipment/equipment.html">Equipment</a></li>
+          <li><a href="/Membership/membership.html">Membership</a></li>
+          <li><a href="/Reservation/reservation.html">Reservation</a></li>
+          <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
+          <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+      </ul>
+      </div>
 
-      Our tools include:
-      
-      Cutting: For precision cutting you'll find tools like mills, lathes, and bandsaws.
-      Joining: Welders (MIG and TIG) are common for fusing pieces together. Oxyacetylene torches provide an alternative for cutting and heating metal.
-      Shaping: Grinders smooth and polish cuts, while drill presses make holes and benders create curves.
-      Other tools: You'll likely find additional tools like shears, cold saws, and forges depending on the makerspace.
-      Knowledge Sharing:  Many makerspaces require safety certifications before using certain equipment.  This often comes with training classes, providing a foundation for safe and effective metalworking.  Experienced members are often around to lend a hand or offer advice on your project.expand_more
-      
-      Projects:  The possibilities in a metalwork space are vast.  You could be crafting anything from sculptures and furniture to car parts and robots. </p>
+      <span onclick="openNav()" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
     <div class="sidenav responsive">
       <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
       <ul id="myMenu">
@@ -54,5 +65,41 @@
         }
       }
       </script>
+       <h1 class= "equipinfo"> Equipment Reservation - METAL WORKS</h1>
+       <P class=" defofparagrapha">        
+         <div class="equipmentinfo"><a href="reserve.html"><button class="reserve" style="width: auto;">Reserve Metal Works</button></a></div>
+
+   <!--       InNOVALabs provides all equipment required for following activities: 
+       <ul>
+         <li> Painting </li> 
+         <li> Oil Pastels* </li>
+         <li> Color pencils </li>
+         <li> Realistic Drawing </li>
+         <li> Sewing Machines and Hand Stitching* </li>
+         <li> Origami* </li>
+         </ul>
+    --></p>
+    <p class=" defofparagraph1">
+      <br><br>
+      InNOVAtion Labs metalwork area is a haven for anyone with a metalworking project. It provides access to specialized tools, typically too expensive for home use, and a collaborative environment for both beginners and experienced metalworkers.
+
+      Our tools include:
+      
+      Cutting: For precision cutting you'll find tools like mills, lathes, and bandsaws.
+      Joining: Welders (MIG and TIG) are common for fusing pieces together. Oxyacetylene torches provide an alternative for cutting and heating metal.
+      Shaping: Grinders smooth and polish cuts, while drill presses make holes and benders create curves.
+      Other tools: You'll likely find additional tools like shears, cold saws, and forges depending on the makerspace.
+      Knowledge Sharing:  Many makerspaces require safety certifications before using certain equipment.  This often comes with training classes, providing a foundation for safe and effective metalworking.  Experienced members are often around to lend a hand or offer advice on your project.expand_more
+      
+      Projects:  The possibilities in a metalwork space are vast.  You could be crafting anything from sculptures and furniture to car parts and robots. </p>
+   
+   
+   <p>* participants under 8 years are not eligible paticipate in these activitie(s). Please read full list of
+       <a href="terms.html"> terms and agreements</a> prior to registration<br>
+   </p>
+   <div w3-include-html="/Footer/footer.html"></div> 
+<script>
+    includeHTML();
+</script>
 </body>
 </html>

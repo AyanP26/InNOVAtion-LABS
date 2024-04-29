@@ -9,8 +9,8 @@
     <script src="/Equipment/equipinfo.js"></script>
 </head>
 <body>
-  <div w3-include-html="/Header/header2.html"></div>    
-   <!--Sidenav-->    
+    <div w3-include-html="/Header/header2.html"></div>  
+    <!--Sidenav-->    
     <div id="mySidenav" class="sidenav">
       <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
       <ul id="myMenu">
@@ -35,32 +35,29 @@
           document.getElementById("mySidenav").style.width = "0";
         }
         </script>
-      <script>
-      function myFunction() {
-        var input, filter, ul, li, a, i;
-        input = document.getElementById("mySearch");
-        filter = input.value.toUpperCase();
-        ul = document.getElementById("myMenu");
-        li = ul.getElementsByTagName("li");
-      
-        for (i = 0; i < li.length; i++) {
-          a = li[i].getElementsByTagName("a")[0];
-          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-          } else {
-            li[i].style.display = "none";
+        <script>
+          function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+          
+            for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+              } else {
+                li[i].style.display = "none";
+              }
+            }
           }
-        }
-      }
       </script>
-<script>
-    includeHTML();
-</script>
-<h1 class= "equipinfo"> Equipment Reservation - 3D PRINTING</h1>
+       <h1 class= "equipinfo"> Equipment Reservation - ARTS and CRAFTS</h1>
         <P class=" defofparagrapha">        
-          <div class="equipmentinfo"><a href="reserve.html"><button class="reserve" style="width: auto;">Reserve a 3D Printer</button></a></div>
+          <div class="equipmentinfo"><a href="reserve.html"><button class="reserve" style="width: auto;">Reserve Arts and Crafts</button></a></div>
 
-     <!--      InNOVALabs provides all equipment required for following activities: 
+          InNOVALabs provides all equipment required for following activities: 
         <ul>
           <li> Painting </li> 
           <li> Oil Pastels* </li>
@@ -69,12 +66,14 @@
           <li> Sewing Machines and Hand Stitching* </li>
           <li> Origami* </li>
           </ul>
- -->    </p>
+    </p>
     
     <p>* participants under 8 years are not eligible paticipate in these activitie(s). Please read full list of
         <a href="terms.html"> terms and agreements</a> prior to registration<br>
     </p>
-
 <div w3-include-html="/Footer/footer.html"></div> 
+<script>
+    includeHTML();
+</script>
 </body>
 </html>

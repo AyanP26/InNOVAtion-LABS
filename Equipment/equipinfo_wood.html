@@ -9,33 +9,33 @@
     <script src="/Equipment/equipinfo.js"></script>
 </head>
 <body>
-    <div w3-include-html="/Header/header2.html"></div>    
-    
-    <h1 class= "equipinfo"> Equipment Reservation/information </h1>
-    <p class=" defofparagraph1"> 
-      A makerspace woodshop is a wonderland for anyone who loves working with wood. It provides access to a range of equipment that most hobbyists wouldn't have space for in their home workshop, along with a supportive community for learning and collaboration. Here's what you'll typically find in a makerspace woodshop:
+  <div w3-include-html="/Header/header2.html"></div>
+    <!--Sidenav-->    
+    <div id="mySidenav" class="sidenav">
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+      <ul id="myMenu">
+          <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+          <li><a href="/index.html">Homepage</a></li>
+          <li><a href="/Equipment/equipment.html">Equipment</a></li>
+          <li><a href="/Membership/membership.html">Membership</a></li>
+          <li><a href="/Reservation/reservation.html">Reservation</a></li>
+          <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
+          <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+      </ul>
+      </div>
 
-      Equipment:
-      
-      Breaking Down Lumber: Band saws for ripping down lumber to size, and planers for achieving consistent thicknesses.
-      Jointing and Milling: Jointers ensure perfectly flat edges for gluing, while thickness planers create boards of uniform thickness.
-      Shaping and Finishing: Sanders of various grits smooth out surfaces, while drill presses make holes for joinery and hardware. Lathes allow for creating curved pieces and spindles.
-      Power Cutting Tools: Miter saws for precise cuts at angles, circular saws for general cutting needs, and jigsaws for intricate cuts.
-      Other Equipment: Depending on the makerspace, you might find specialty tools like woodturning lathes, CNC machines, or even vacuum clamps for holding glued pieces together.
-      Community and Learning:
-      
-      Safety First: Many makerspaces require safety certifications for using specific tools. This often involves training classes that teach proper technique and hazard awareness.
-      Shared Knowledge: Experienced woodworkers are usually around to offer guidance, suggest solutions, or simply inspire you with their projects.
-      Inspiration and Collaboration: Seeing the work of other makers can spark new ideas for your own projects. The collaborative environment fosters sharing of skills and techniques.
-      Projects:
-      
-      The possibilities in a makerspace woodshop are endless. You could be crafting anything from simple cutting boards and shelves to intricate furniture pieces, toys, or even artistic sculptures.
-      
-      Finding a Makerspace Woodshop:
-      
-      Check the website of makerspaces in your area. Most will have a dedicated section detailing their woodworking equipment and any membership requirements.
-      Search online communities like forums or subreddits for woodworking and makerspaces. Look for terms like "[woodworking] + [makerspace]" to find discussions about real-world experiences  
-    </p>
+      <span onclick="openNav()" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+    
     <div class="sidenav">
       <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
       <ul id="myMenu">
@@ -66,5 +66,56 @@
         }
       }
       </script>
+      <h1 class= "equipinfo"> Equipment Reservation - WOOD WORKS</h1>
+      <P class=" defofparagrapha">        
+        <div class="equipmentinfo"><a href="reserve.html"><button class="reserve" style="width: auto;">Reserve Wood Works</button></a></div>
+
+ <!--        InNOVALabs provides all equipment required for following activities: 
+      <ul>
+        <li> Painting </li> 
+        <li> Oil Pastels* </li>
+        <li> Color pencils </li>
+        <li> Realistic Drawing </li>
+        <li> Sewing Machines and Hand Stitching* </li>
+        <li> Origami* </li>
+        </ul>
+  --> </p>
+  
+  <p class=" defofparagraph1"> 
+    A makerspace woodshop is a wonderland for anyone who loves working with wood. It provides access to a range of equipment that most hobbyists wouldn't have space for in their home workshop. 
+  </p>
+  <p class=" defofparagraph1"> 
+   
+    Equipment:
+  </p>
+  <p class=" defofparagraph1"> 
+    
+    Breaking Down Lumber: Band saws for ripping down lumber to size, and planers for achieving consistent thicknesses.
+    Jointing and Milling: Jointers ensure perfectly flat edges for gluing, while thickness planers create boards of uniform thickness.
+    Shaping and Finishing: Sanders of various grits smooth out surfaces, while drill presses make holes for joinery and hardware. Lathes allow for creating curved pieces and spindles.
+    Power Cutting Tools: Miter saws for precise cuts at angles, circular saws for general cutting needs, and jigsaws for intricate cuts.
+    Other Equipment: Depending on the makerspace, you might find specialty tools like woodturning lathes, CNC machines, or even vacuum clamps for holding glued pieces together.
+    Community and Learning:
+  </p>
+  <p class=" defofparagraph1"> 
+    
+    Safety First: Many makerspaces require safety certifications for using specific tools. This often involves training classes that teach proper technique and hazard awareness.
+    Shared Knowledge: Experienced woodworkers are usually around to offer guidance, suggest solutions, or simply inspire you with their projects.
+    Inspiration and Collaboration: Seeing the work of other makers can spark new ideas for your own projects. The collaborative environment fosters sharing of skills and techniques.
+    Projects:
+    
+    The possibilities in a makerspace woodshop are endless. You could be crafting anything from simple cutting boards and shelves to intricate furniture pieces, toys, or even artistic sculptures.
+    
+    Finding a Makerspace Woodshop:
+    
+      
+  </p>
+<p>* participants under 8 years are not eligible paticipate in these activitie(s). Please read full list of
+      <a href="terms.html"> terms and agreements</a> prior to registration<br>
+  </p>
+<div w3-include-html="/Footer/footer.html"></div> 
+<script>
+    includeHTML();
+</script>
 </body>
 </html>

@@ -23,7 +23,7 @@ body {
 }
 
 .footer {
-    margin-top: 0vh;
+    margin-top: 50vh;
     text-align: center;
 }
 
@@ -37,24 +37,8 @@ body {
 
 .equipmentintro {
     text-align: center;
-    padding-left: 20%;
+    padding-left: 0%
 }
-
-box-sizing:border-box 
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
 
 /* Next & previous buttons */
 .prev, .next {
@@ -125,54 +109,62 @@ box-sizing:border-box
 }
 
 .sidenav {
-    height: 75%;
-    width: 250px;
-    position: absolute;
-    z-index: 1;
-    top: 180px;
-    left: 0;
-    background-color: #111;
-    overflow: hidden;
-    padding-top: 20px;
-  }
-  
-  .sidenav a {
-    padding: 6px 8px 6px 0;
-    text-decoration: none;
-    font-size: 25px;
-    color: #0097FF;
-    display: block;
-  }
-  
-  .sidenav a:hover {
-    color: #0061FF;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 
-  #mySearch {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    font-size: 18px;
-    padding: 11px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-  }
-  
-  #myMenu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #myMenu li a {
-    padding: 12px;
-    text-decoration: none;
-    display: block
-  }
-  
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #0097FF;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #0061FF;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#mySearch {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+}
+
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  display: block
+}
