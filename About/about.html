@@ -9,57 +9,43 @@
     <script src="/About/about.js"></script>
 </head>
 <body>
-  <div w3-include-html="/Header/header2.html"></div>
-
-    <br>
-  <br>
-    <div id="mySidenav" class="sidenav">
-    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-    <ul id="myMenu">
-        <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-        <li><a href="/index.html">Homepage</a></li>
-        <li><a href="/Equipment/equipment.html">Equipment</a></li>
-        <li><a href="/Membership/membership.html">Membership</a></li>
-        <li><a href="/Reservation/reservation.html">Reservation</a></li>
-        <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
-        <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
-    </ul>
+<a href="/index.html">
+        <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo">
+    </a>
+    <br>    
+    <div class="sidenav">
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+      <ul id="myMenu">
+          <li><a href="/index.html">Homepage</a></li>
+          <li><a href="/Equipment/equipment.html">Equipment</a></li>
+          <li><a href="/Membership/membership.html">Membership</a></li>
+          <li><a href="/Reservation/reservation.html">Reservation</a></li>
+          <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
+          <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
+      </ul>
     </div>
 
-    <span onclick="openNav()" style="font-size:30px;cursor:pointer">&#9776;</span>
-
-    <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-      }
+  <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
       
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
-      </script>
-
-<script>
-    function myFunction() {
-      var input, filter, ul, li, a, i;
-      input = document.getElementById("mySearch");
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("myMenu");
-      li = ul.getElementsByTagName("li");
-    
-      for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
         }
       }
-    }
-    </script>
+      </script>
           <div class="aboutdiv">
-        <h2 class="abouthead">About Us</h2>
+        <h2 class="about">About Us</h2>
         <h2 class="about">Ayan Prasad</h2>
-        <img src="/About/ayanimg.jpg" alt="Ayan" class="aboutimg">
         <div class="abouttext">
         <p><b>Hello! I am a boy who is 14 years old. 
           I am an 8th grader who goes<br> to Rocky Run Middle School in Fairfax, VA.
@@ -75,18 +61,31 @@
       <br>This is my second year in TSA. Last year I went all the way to nationals and <br>even got in the top three in one event!</b></p>
         </div>
       </div>
-
-          <div class="aboutdiv">
-        <h2 class="about">Avani Gandikota</h2>
-        <img src="" alt="" class="aboutimg">
-        <div class="abouttext">
-        <p><b>Hello! I’m currently 13 years old, and attend Rocky Run Middle School in Fairfax, VA. I have recently been interested in programming and web design. Although I don’t have much past experience, I have a strong drive to learn. Outside of that, I’m an enjoyer of all fine-arts forms, and have written multiple novels (that I hope to publish some day), songs, and have even attempted composing musical pieces. In school, I’m a math enthusiast. This is my first year being a part of my school’s TSA chapter.</b></p>
-        </div>
-      </div>
+      <img src="/About/ayanimg.jpg" alt="Ayan" class="aboutimg">
     <br>
-    <div w3-include-html="/Footer/footer.html"></div> 
-    <script>
-        includeHTML();
-    </script>
+   
+    <div class="aboutdiv">
+  <h2 class="about">Ananth Namilae</h2>
+  <div class="abouttext">
+  <p><b>Hello! I am a boy who is 13 years old. 
+    I am an 8th grader who goes<br> to Rocky Run Middle School in Fairfax, VA.
+  <br>I love programming with many coding languages. 
+  <br>I know HTML, CSS, Javascript, Python, and Scratch
+<br>Additionally, I love books. 
+<br>I read books such as Percy Jackson and 
+<br>Harry Potter. I also watch all kinds of anime 
+<br>such as Naruto and Dragon Ball. Furthermore, I sing songs. 
+<br>I memorized many songs and can sing easily. 
+<br>Also, I love to play with Dungeons and Dragons(DND). I can go for hours playing DND.
+<br>In school, I am part of the TSA afterschool club in my school.
+<br>This is my second year in TSA. Last year I went all the way to nationals and <br>even got in the top three in one event!</b></p>
+  </div>
+</div>
+<img src="/About/AnanthImG.PNG" alt="Ayan" class="aboutimg">
+<br>
+<div w3-include-html="/Footer/footer.html"></div> 
+<script>
+  includeHTML();
+</script>
 </body>
 </html>
