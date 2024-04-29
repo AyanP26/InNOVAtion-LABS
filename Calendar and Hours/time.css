@@ -67,6 +67,16 @@ body {
     cursor: pointer;
 }
 
+.container-calendar #left .classesandevents {
+    color: green;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 15px auto;
+}
+ 
+/* Calendar container */
 .container-calendar {
     background: #ffffff;
     padding: 15px;
@@ -78,6 +88,7 @@ body {
     justify-content: space-between;
 }
  
+/* Event section styling */
 #event-section {
     padding: 10px;
     background: #f5f5f5;
@@ -130,6 +141,7 @@ body {
     left: 0;
 }
  
+/* event tooltip styling */
 .event-tooltip {
     position: absolute;
     background-color: rgba(234, 232, 232, 0.763);
@@ -149,6 +161,7 @@ body {
     display: block;
 }
  
+/* Reminder section styling */
 #reminder-section {
     padding: 10px;
     background: #f5f5f5;
@@ -172,6 +185,7 @@ body {
     font-size: 16px;
 }
  
+/* Style for the delete buttons */
 .delete-event {
     background: rgb(237, 19, 19);
     color: white;
@@ -182,6 +196,7 @@ body {
     align-items: right;
 }
  
+/* Buttons in the calendar */
 .button-container-calendar button {
     cursor: pointer;
     background: green;
@@ -191,6 +206,7 @@ body {
     padding: 5px 10px;
 }
  
+/* Calendar table */
 .table-calendar {
     border-collapse: collapse;
     width: 100%;
@@ -204,6 +220,7 @@ body {
     vertical-align: top;
 }
  
+/* Date picker */
 .date-picker.selected {
     background-color: #f2f2f2;
     font-weight: bold;
@@ -214,25 +231,31 @@ body {
     border-bottom: 2px solid currentColor;
 }
  
+/* Day-specific styling */
 .date-picker:nth-child(1) {
     color: red;
+    /* Sunday */
 }
  
 .date-picker:nth-child(6) {
     color: green;
+    /* Friday */
 }
  
+/* Hover effect for date cells */
 .date-picker:hover {
     background-color: green;
     color: white;
     cursor: pointer;
 }
  
+/* Header for month and year */
 #monthAndYear {
     text-align: center;
     margin-top: 0;
 }
  
+/* Navigation buttons */
 .button-container-calendar {
     position: relative;
     margin-bottom: 1em;
@@ -248,6 +271,7 @@ body {
     float: right;
 }
  
+/* Footer styling */
 .footer-container-calendar {
     margin-top: 1em;
     border-top: 1px solid #dadada;
@@ -262,45 +286,7 @@ body {
     border-radius: 3px;
     padding: 5px 1em;
 }
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #0097FF;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
-    color: #0061FF;
-  }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+ 
 
   .hours {
     font-size: 20px;
@@ -308,11 +294,6 @@ body {
     border-style: solid;
     border-style: medium;
     float: right;;
-  }
-
-  .classesandevents {
-    text-align: center;
-    color: green;
   }
 
   #mySearch {
