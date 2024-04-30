@@ -426,3 +426,11 @@ input[type=text]:focus {
     margin-right: 4%;
   }
 
+  .footer {
+    margin-top: 0vh;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+}
