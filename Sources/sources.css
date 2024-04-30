@@ -26,9 +26,7 @@ body {
 }
 
 .sources {
-  margin: 0 auto;
-  text-align: justify;
-  width: 30em;
+    text-align: left;
 }
 
 .sidenav {
