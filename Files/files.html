@@ -9,13 +9,13 @@
     <script src="/Files/files.js"></script>
 </head>
 <body>
-<a href="/index.html">
-        <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo">
-    </a>
-    <br>    
-        <div class="sidenav">
+  <div w3-include-html="/Header/header2.html"></div>
+    <br>
+    <br>
+      <div id="mySidenav" class="sidenav">
       <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
       <ul id="myMenu">
+          <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
           <li><a href="/index.html">Homepage</a></li>
           <li><a href="/Equipment/equipment.html">Equipment</a></li>
           <li><a href="/Membership/membership.html">Membership</a></li>
@@ -23,7 +23,19 @@
           <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
           <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
       </ul>
-    </div>
+      </div>
+
+      <span onclick="openNav()" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
 
   <script>
       function myFunction() {
@@ -43,6 +55,8 @@
         }
       }
       </script>
+          <br>
+      <a href="/Files/TSAPlanOfWorkLogAyanAnanthAvani.pdf" target="_blank">Plan of Work Log</a>
     <div w3-include-html="/Footer/footer.html"></div> 
     <script>
         includeHTML();
