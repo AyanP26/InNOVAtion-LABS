@@ -10,11 +10,11 @@
 </head>
 <body>
     <!--Header-->
-    <a href="/index.html">
-        <img class="logo" src="/innovationlabslogo.png" alt="InNOVAtion Labs Logo">
-    </a>
-    <br>
+  <div w3-include-html="/Header/header2.html"></div>
+
     <!--Sidenav-->    
+     <br>
+    <br>
       <div id="mySidenav" class="sidenav">
       <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
       <ul id="myMenu">
@@ -39,6 +39,7 @@
           document.getElementById("mySidenav").style.width = "0";
         }
         </script>
+
   <script>
       function myFunction() {
         var input, filter, ul, li, a, i;
