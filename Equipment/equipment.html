@@ -75,7 +75,9 @@
   <h1 class= "equipmentheader">Reserve Equipment</h1>
      
     <!--Sidenav-->    
-    <div id="mySidenav" class="sidenav">
+     <br>
+    <br>
+      <div id="mySidenav" class="sidenav">
       <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
       <ul id="myMenu">
           <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
@@ -99,7 +101,25 @@
           document.getElementById("mySidenav").style.width = "0";
         }
         </script>
-<!-- START NEW BODY-->
+
+  <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+      
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+      </script><!-- START NEW BODY-->
 <!-- START RESPONSIVE IMAGES-->  
 <style>
   .row {
