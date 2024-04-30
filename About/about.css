@@ -102,3 +102,31 @@ body {
     font-size: 20px;
     text-align: justify;
   }
+
+  .ayanimg {
+    float: left;
+    margin: 5px;
+  }
+
+  .aboutayan {
+    text-align: left;
+  }
+
+  .abouttextayan {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .avaniimg {
+    float: left;
+    margin: 5px;
+  }
+
+  .aboutavani {
+    text-align: left;
+  }
+
+  .abouttextavani {
+    font-size: 20px;
+    text-align: left;
+  }
