@@ -62,35 +62,9 @@
       Stay tuned! We'll be revealing more details about the new equipment and its arrival date soon. In the meantime, follow our facebook (InnovatrmoreLabz) for more updates.  
    
     </p>
-    <!-- <div class="sidenav">
-      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-      <ul id="myMenu">
-          <li><a href="/index.html">Homepage</a></li>
-          <li><a href="/Equipment/equipment.html">Equipment</a></li>
-          <li><a href="/Membership/membership.html">Membership</a></li>
-          <li><a href="/Reservation/reservation.html">Reservation</a></li>
-          <li><a href="/Calendar and Hours/time.html">Calendar of Events and Hours</a></li>
-          <li><a href="/Classes and Events/classes.html">Classes and Events</a></li>
-      </ul>
-    </div>
- -->
-  <script>
-      function myFunction() {
-        var input, filter, ul, li, a, i;
-        input = document.getElementById("mySearch");
-        filter = input.value.toUpperCase();
-        ul = document.getElementById("myMenu");
-        li = ul.getElementsByTagName("li");
-      
-        for (i = 0; i < li.length; i++) {
-          a = li[i].getElementsByTagName("a")[0];
-          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-          } else {
-            li[i].style.display = "none";
-          }
-        }
-      }
-      </script>
+       <div w3-include-html="/Footer/footer.html"></div> 
+    <script>
+        includeHTML();
+    </script>
 </body>
 </html>
