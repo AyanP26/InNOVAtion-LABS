@@ -49,6 +49,21 @@ body {
 
   #more {display: none;}
 
+  #myBtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 15px; 
+  }
+
+  #myBtn {
+    opacity: 1;
+  }
+
   .checked {
     color: yellow;
   }
