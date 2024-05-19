@@ -47,7 +47,10 @@ body {
     font-size: 14px;
   }
 
-  #more {display: none;}
+  #more {
+      display: none;
+      color: white;
+  }
 
   #myBtn {
     background-color: #04AA6D;
