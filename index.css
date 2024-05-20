@@ -48,8 +48,9 @@ body {
   }
 
   #more {
-      display: none;
-      color: white;
+    display: none;
+    margin-left: 75%;
+    position: absolute;
   }
 
   #myBtn {
