@@ -7,8 +7,34 @@
     <title>Header 2</title>
 </head>
 <body>
-          <!--Sign Up-->
-          <button class="signup" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+  <header class="headerFixed">
+    
+    <!--Navigation-->
+    <div class = "leftnavbox">
+      <br/>
+      <span onclick="openNav()" style="font-size:50px;cursor:pointer;color:#fedc97;">&#9776;</span>
+    </div>
+
+    <!--Logo-->
+    <div class = "leftheaderbox">
+            <a href="../index.html">
+                <img class="logo" src="../innovationlabslogo.png" alt="InNOVAtion Labs Logo">
+            </a>
+    </div>
+
+
+    <!--Company Name and slogan-->
+    <div class = middleheaderbox>
+        <h1 class="title">InNOVAtion Labs</h1>
+        <h1 class="slogan">Innovate, Inspire, Interest</h1>
+    </div>
+
+    <!--Login, sign up etc.-->
+    <div class = rightheaderbox >
+        
+        <!--Sign Up-->
+        <br/>
+        <button class="signup" vertical-align="middle" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
 
           <div id="id01" class="modal">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
@@ -52,7 +78,8 @@
             }
           }
           </script>
-          <!--Login-->
+
+        <!--Login-->
                   <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width: auto;">Login</button>
           
                   <div id="id02" class="modal">
@@ -95,8 +122,15 @@
                     }
                     </script>
 
-                  <a href="../index.html">
-                      <img class="logo" src="../innovationlabslogo.png" alt="InNOVAtion Labs Logo">
-                  </a>
+
+        <br/><br/><br/>
+
+        <p class="address">4400 Stringfellow Rd &nbsp;&nbsp;&nbsp;<br/>
+        Chantilly, VA 20151 &nbsp;&nbsp;&nbsp;<br/>
+        Tel No: 1-800-GET-NOVA &nbsp;&nbsp;&nbsp;<br/>
+        </p>
+    </div>
+
+    </header>
 </body>
 </html>
