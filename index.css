@@ -580,7 +580,7 @@ input[type=text]:focus {
             width: 18%;
             margin-top: 2%;
             margin-left:4%;
-            margin-right: 5%;
+            margin-right: 3%;
             padding-left: 15px;
             min-height: 25vh;
             float: left;
@@ -595,7 +595,7 @@ input[type=text]:focus {
             width: 18%;
             margin-top: 2%;
             margin-left:4%;
-            margin-right: 5%;
+            margin-right: 3%;
             padding-left: 15px;
             min-height: 25vh;
             float: left;
@@ -610,7 +610,7 @@ input[type=text]:focus {
       width: 18%;
       margin-top: 2%;
       margin-left:4%;
-      margin-right: 5%;
+      margin-right: 3%;
       padding-left: 15px;
       float: right;
       min-height: 25vh;
@@ -625,7 +625,7 @@ input[type=text]:focus {
       width: 18%;
       margin-top: 2%;
       margin-left:4%;
-      margin-right: 5%;
+      margin-right: 3%;
       padding-left: 15px;
       float: right;
       min-height: 25vh;
